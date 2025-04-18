@@ -11,7 +11,7 @@ import {
   type ImageTransformation,
   manipulateImage,
 } from '#/state/gallery'
-import {atoms as a, useTheme} from '#/alf'
+import {atoms as a, tokens, useTheme} from '#/alf'
 import {Button, ButtonIcon, ButtonText} from '#/components/Button'
 import * as Dialog from '#/components/Dialog'
 import {Loader} from '#/components/Loader'
@@ -168,7 +168,10 @@ function EditImageInner({
         className="ReactCrop--no-animate"
         onDragStart={() => setIsDragging(true)}
         onDragEnd={() => setIsDragging(false)}>
-        <img src={source.path} style={{maxHeight: `50vh`}} />
+        <img
+          src={source.path}
+          style={{maxHeight: `50vh`, borderRadius: tokens.borderRadius.xs}}
+        />
       </ReactCrop>
       {/* Eat clicks when dragging, otherwise mousing up over the backdrop
         causes the dialog to close */}
