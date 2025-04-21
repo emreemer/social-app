@@ -39,10 +39,6 @@ export interface DeleteAccountModal {
   name: 'delete-account'
 }
 
-export interface InviteCodesModal {
-  name: 'invite-codes'
-}
-
 export interface ContentLanguagesSettingsModal {
   name: 'content-languages-settings'
 }
@@ -85,9 +81,6 @@ export type Modal =
 
   // Posts
   | CropImageModal
-
-  // Bluesky access
-  | InviteCodesModal
 
   // Generic
   | LinkWarningModal
